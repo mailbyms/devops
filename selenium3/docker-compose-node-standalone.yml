@@ -1,0 +1,10 @@
+version: '2'
+services:
+  chrome:
+    image: registry.cn-shenzhen.aliyuncs.com/selenium/node-chrome:3.141.59-20210105-with-fake-audio-video
+    volumes:
+      - /dev/shm:/dev/shm
+    environment:
+      HUB_HOST: 192.168.1.197
+      START_XVFB: "false"
+      JAVA_OPTS: "-Dwebdriver.chrome.whitelistedIps="
